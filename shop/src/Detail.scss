@@ -1,0 +1,52 @@
+$메인칼라 : #ff0000;
+
+.red {
+    color : $메인칼라;
+}
+
+@mixin 함수() {
+    background: #dddddd;
+    padding : 10px;
+    border-radius:5px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.my-alert {
+    @include 함수();
+}
+
+.my-alert-red {
+    @extend .my-alert;
+    background: rgb(143, 207, 186);
+    color:rgb(223, 255, 173);
+    margin-top : 20px;
+    margin-bottom: 20px;
+
+    text-decoration-skip: center;
+}
+
+.my-alert p {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom:0;
+}
+
+// div.container h4 {
+//     color : blue;
+// }
+// div.container p {
+//     color : green;
+// }
+
+// div.container {
+//     h4{
+//         color : blue;
+//     }
+//     p {
+//         color : green; 
+//     }
+// }
